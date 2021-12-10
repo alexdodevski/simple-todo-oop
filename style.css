@@ -1,0 +1,94 @@
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+#app {
+    width: 500px;
+    height: 600px;
+    border: 1px solid black;
+    margin: 0 auto;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 30px;
+    border-radius: 5px;
+    background: #534D41;
+}
+
+.todo_header {
+    margin: 0 auto;
+    margin-top: 20px;
+    color: #F0CEA0;
+}
+
+.todo_block {
+    width: 400px;
+    height: 330px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background: #F0CEA0;
+    color: #534D41;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.todo_item {
+    padding: 10px;
+    border-radius: 5px;
+    border: 0.5px solid #534D41;
+    margin-top: 5px;
+    width: 350px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn_done {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.btn_done i {
+    font-size: 22px;
+}
+
+.btn_done:hover {
+    color: white
+}
+
+.todo_item p {
+    margin: 0;
+}
+
+.todo_input {
+    border-radius: 5px;
+    border: 1px solid black;
+    outline: 0;
+    padding: 10px;
+    font-size: 18px;
+    width: 380px;
+    background: #F0CEA0;
+    color: #534D41;
+}
+
+.todo_btn {
+    border-radius: 5px;
+    border: 1px solid black;
+    padding: 10px;
+    background: #F0CEA0;
+    color: #534D41;
+    cursor: pointer;
+}
+
+.todo_btn:active {
+    background: #9C9381;
+}
