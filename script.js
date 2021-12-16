@@ -30,7 +30,6 @@ class App {
             elem.setAttribute('data-id', dateId)
             this.todoBlock.append(elem)
             this.todoInput.value = ''
-
         }
     }
     render() {
