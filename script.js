@@ -25,18 +25,17 @@ class App {
         const value = this.todoInput.value
         if (value !== "" && value.trim().length > 0) {
             let elem = this.createTodo(this.todoInput.value.trim())
-            let date = Date.now()
-            localStorage.setItem(date, JSON.stringify(elem.textContent))
-            elem.setAttribute('data-id', date)
+            let dateId = Date.now()
+            localStorage.setItem(dateId, JSON.stringify(elem.textContent))
+            elem.setAttribute('data-id', dateId)
             this.todoBlock.append(elem)
             this.todoInput.value = ''
-            console.log(localStorage)
+
         }
     }
     render() {
         for (let i = 0; i <= localStorage.length - 1; i++) {
             let keys = Object.keys(localStorage).sort((a, b) => a - b)
-            console.log(keys)
             let div = this.createTodo(JSON.parse(localStorage.getItem(keys[i])))
             div.setAttribute('data-id', keys[i])
             this.todoBlock.append(div)
@@ -57,19 +56,9 @@ class App {
         let todoItem = target.closest('.todo_item')
         localStorage.removeItem(todoItem.getAttribute('data-id'))
         todoItem.remove()
-        console.log(localStorage)
+
     }
 }
 
 const app = new App(document.querySelector('#app'))
-
 app.render()
-console.log(localStorage)
-console.log(typeof localStorage.key(0))
-console.log()
-
-
-
-function id() {
-    return Math.floor(Math.random() * 100)
-}
