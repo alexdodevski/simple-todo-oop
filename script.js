@@ -33,8 +33,8 @@ class App {
         }
     }
     render() {
+        let keys = Object.keys(localStorage).sort((a, b) => a - b)
         for (let i = 0; i <= localStorage.length - 1; i++) {
-            let keys = Object.keys(localStorage).sort((a, b) => a - b)
             let div = this.createTodo(JSON.parse(localStorage.getItem(keys[i])))
             div.setAttribute('data-id', keys[i])
             this.todoBlock.append(div)
@@ -55,7 +55,6 @@ class App {
         let todoItem = target.closest('.todo_item')
         localStorage.removeItem(todoItem.getAttribute('data-id'))
         todoItem.remove()
-
     }
 }
 
